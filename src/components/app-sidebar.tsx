@@ -21,8 +21,8 @@ const items = [
     icon: Home,
   },
   {
-    title: "Word Analytics",
-    url: "/word-analytics",
+    title: "Blog Posts",
+    url: "/blogs",
     icon: Inbox,
   },
   {
