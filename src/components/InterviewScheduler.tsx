@@ -10,17 +10,15 @@ import {
   Tooltip,
 } from "recharts";
 
-const data = [
-  { day: "Monday", spots: 5 },
-  { day: "Tuesday", spots: 3 },
-  { day: "Wednesday", spots: 4 },
-  { day: "Thursday", spots: 2 },
-  { day: "Friday", spots: 6 },
-];
-
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#8884D8"];
 
-export default function InterviewSchedulerCard() {
+type InterviewSchedulerProps = {
+  data: any;
+};
+
+export default function InterviewSchedulerCard({
+  data,
+}: InterviewSchedulerProps) {
   return (
     <Card>
       <CardHeader>
@@ -39,7 +37,7 @@ export default function InterviewSchedulerCard() {
               dataKey="spots"
               nameKey="day"
             >
-              {data.map((entry, index) => (
+              {data.map((entry: any, index: any) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}
