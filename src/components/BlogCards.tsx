@@ -12,16 +12,11 @@ import {
   Legend,
 } from "recharts";
 
-const data = [
-  { category: "Technology", month: "Jan", active: 20, scheduled: 10 },
-  { category: "Technology", month: "Feb", active: 25, scheduled: 15 },
-  { category: "Travel", month: "Jan", active: 15, scheduled: 5 },
-  { category: "Travel", month: "Feb", active: 18, scheduled: 8 },
-  { category: "Food", month: "Jan", active: 30, scheduled: 12 },
-  { category: "Food", month: "Feb", active: 35, scheduled: 15 },
-];
+type BlogCardsProps = {
+  blogs: any;
+};
 
-export default function BlogsCard() {
+export default function BlogsCard({ blogs }: BlogCardsProps) {
   return (
     <Card className="w-full">
       <CardHeader>
@@ -29,7 +24,7 @@ export default function BlogsCard() {
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={300}>
-          <BarChart data={data}>
+          <BarChart data={blogs}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="category" />
             <YAxis />
