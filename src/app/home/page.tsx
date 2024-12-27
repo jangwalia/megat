@@ -13,11 +13,14 @@ export default async function DashboardPage() {
 
   return (
     <div className="container  mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6">Multi-App Dashboard</h1>
       <div className="grid w-full  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <Suspense fallback={<Loading />}>
           <BlogsCard blogs={totalBlogs} />
+        </Suspense>
+        <Suspense fallback={<Loading />}>
           <InterviewSchedulerCard data={schedulerData} />
+        </Suspense>
+        <Suspense fallback={<Loading />}>
           <PetMartCard data={totalPets} />
         </Suspense>
       </div>
