@@ -32,7 +32,7 @@ const items = [
   },
   {
     title: "Pet Mart",
-    url: "/pet-mart",
+    url: "/pets",
     icon: Dog,
   },
   {
