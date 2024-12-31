@@ -30,3 +30,14 @@ model TotalPets {
   petType String
   count   Int
 }
+
+model Blogs {
+  id        Int      @id @default(autoincrement())
+  title     String
+  category  String
+  createdAt DateTime
+  status    String
+  author    String
+  content   String
+  mainImage String
+}

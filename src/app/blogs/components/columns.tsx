@@ -7,9 +7,10 @@ export type Blog = {
   id: number;
   mainImage: string | null;
   title: string;
-  Category: string;
-  Author: string;
-  createdAt: string;
+  category: string;
+  author: string;
+  createdAt: Date;
+  content: string;
 };
 
 export const columns: ColumnDef<Blog>[] = [
@@ -36,15 +37,19 @@ export const columns: ColumnDef<Blog>[] = [
     header: "Title",
   },
   {
-    accessorKey: "Category",
+    accessorKey: "category",
     header: "Category",
   },
   {
-    accessorKey: "Author",
+    accessorKey: "author",
     header: "Author",
   },
   {
     accessorKey: "createdAt",
     header: "Created At",
+  },
+  {
+    accessorKey: "content",
+    header: "Content",
   },
 ];
