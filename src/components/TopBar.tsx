@@ -36,9 +36,7 @@ function TopBar() {
           </BreadcrumbItem>
 
           {segments.map((segment, index) => {
-            const path = `/${["home", ...segments.slice(0, index + 1)].join(
-              "/"
-            )}`;
+            const path = `/${[segments.slice(0, index + 1)].join("/")}`;
             const isLast = index === segments.length - 1;
 
             return (
